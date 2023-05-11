@@ -1,6 +1,11 @@
 fun main() {
     val numbers = listOf(10, 20, 30, 40, 50, 60)
-    val max = numbers.maxOrNull() 
+    var max = numbers[0]
 
+    for (i in 1 until numbers.size) {
+        if (numbers[i] > max) { 
+            max = numbers[i] 
+        }
+    }
     println("The maximum number is $max")
 }
